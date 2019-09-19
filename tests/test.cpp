@@ -3,6 +3,8 @@
 
 #include "gtest/gtest.h"
 
+#include "lib.h"
+
 struct TestRow {
     std::string test_case;
     std::int32_t test_result;
@@ -21,7 +23,9 @@ class ArithmeticTest : public ::testing::TestWithParam<TestRow> {
 TEST_P(ArithmeticTest, ProducesCorrectResults
 ) {
     auto row = GetParam();
-    EXPECT_EQ(true, true);
+    MyClass myClass;
+    auto i = myClass.getI();
+    EXPECT_EQ(i, 0);
 }
 
 INSTANTIATE_TEST_CASE_P
