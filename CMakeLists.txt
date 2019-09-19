@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(ubisoft)
+project(myproject VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -34,4 +34,4 @@ if(CHECK_CLANG_TIDY)
   endif()
 endif()
 
-add_executable(ubisoft main.cpp)
+add_executable(myproject main.cpp)
